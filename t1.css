@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 equal parts */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+/* Assign widths using grid-column to span across grid tracks */
+.brand-design {
+    background-color: #FFD166;
+    grid-column: span 3; /* 60% (3 out of 5 columns) */
+}
+
+.web-design {
+    background-color: #FF6B6B;
+    grid-column: span 2; /* 40% (2 out of 5 columns) */
+}
+
+.social-media-design {
+    background-color: #4A90E2;
+    grid-column: span 2; /* 40% (2 out of 5 columns) */
+}
+
+.packaging-design {
+    background-color: #FFD700;
+    grid-column: span 3; /* 60% (3 out of 5 columns) */
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
