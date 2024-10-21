@@ -3,301 +3,229 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ab Kamao Opinion Se</title>
+    <title>Responsive Design</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap"
       rel="stylesheet"
-      href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/bs-brain@2.0.4/components/heroes/hero-3/assets/css/hero-3.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="styles.css" />
     <style>
-      .container {
-        width: 100%;
-        margin: 0 auto;
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-      .ncontainer {
-        /* padding-left: 241px;
-              padding-right: 241px; */
-        width: 100%;
-        margin: 0 auto;
+
+      /* Section for Categories */
+      .section-2 {
+        padding: 2rem 0;
       }
-      .nav {
-        background: linear-gradient(
-          to right,
-          #1e5799,
-          #2989d8,
-          #207cca,
-          #7db9e8
-        );
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        position: relative;
-        width: 100%;
-        height: 50px;
-        border-radius: 50px;
+
+      .container2 {
+        margin: 0 auto;
+        padding: 0 2rem;
+        max-width: 1200px;
+      }
+
+      .container2 h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: #02214f;
+        margin-bottom: 2rem;
+      }
+
+      .featured-categories {
         display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 1rem;
+        padding: 1rem;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+      }
+
+      .featured-categories::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      .featured-categories::-webkit-scrollbar-thumb {
+        background-color: #02214f;
+        border-radius: 10px;
+      }
+
+      .category {
+        background-color: #fff;
+        height: 200px;
+        width: 250px;
+        flex: 0 0 auto; /* Prevent the category boxes from shrinking */
+        padding: 1rem;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .category:nth-child(1),
+      .category:nth-child(4),
+      .category:nth-child(7),
+      .category:nth-child(10) {
+        background-color: #ffe800;
+      }
+
+      .category:nth-child(2),
+      .category:nth-child(5),
+      .category:nth-child(8),
+      .category:nth-child(11) {
+        background-color: #76d0cd;
+      }
+
+      .category:nth-child(3),
+      .category:nth-child(6),
+      .category:nth-child(9),
+      .category:nth-child(12) {
+        background-color: #f2b79b;
+      }
+
+      .category h2 {
+        font-size: 1.5rem;
+        color: #02214f;
+      }
+
+      /* Hero Section */
+      .hero {
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        padding: 2rem;
+        gap: 2rem;
       }
 
-      .menu5 {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        list-style: none;
-        justify-content: space-between;
+      .hero-text {
+        max-width: 500px;
       }
 
-      .nav-link {
+      .hero-heading {
+        font-size: 3rem;
+        font-weight: 900;
+        color: #02214f;
+      }
+
+      .hero-text2 {
+        font-size: 1.5rem;
+        color: #02214f;
+        margin-top: -10px;
+      }
+
+      .hero img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Button Styling */
+      .btn-1 {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background-color: #02214f;
         color: white;
-        font-size: 16px;
-        padding: 10px 20px;
+        border-radius: 5px;
+        text-align: center;
         text-decoration: none;
-      }
-      .nav-link.active {
-        background-color: #0a1f44;
-        border-radius: 25px;
+        margin-top: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
       }
 
-      @media (max-width: 768px) {
-        .navbar-brand {
-          width: 100px;
-          height: 48px;
-        }
-        .ncontainer {
-          padding-left: 10px;
-          padding-right: 10px;
-          width: 100%;
-          top: 0; /* Ensure it sticks to the top in mobile */
-          position: fixed; /* Keep it fixed at the top */
-          z-index: 999; /* High z-index to ensure visibility */
-          /* Initially hide the navbar */
+      /* Media Queries */
+      @media screen and (max-width: 768px) {
+        /* Adjust the hero section on smaller screens */
+        .hero {
+          flex-direction: column;
+          text-align: center;
         }
 
-        .nav {
-          width: 100%;
-          position: fixed;
-          bottom: 0; /* Stick to the bottom */
-          left: 0;
-          right: 0;
-          z-index: 999;
+        .hero-heading {
+          font-size: 2rem;
         }
-        .menu5 {
-          flex-direction: row;
-        }
-        .nav-link.active {
-          background-size: cover;
-          background-color: #0a1f44;
-          border-radius: 25px;
-          height: 35px;
-        }
-        .nav-link {
-          color: white;
-          font-size: 14px;
-          justify-items: center;
-          padding: 10px 20px;
-          text-decoration: none;
-        }
-        .nav-link:focus,
-        .nav-link:hover {
-          color: #e7ebf0;
-        }
-      }
-      @media (max-width: 480px) {
-        .ncontainer {
-          padding-left: 10px;
-          padding-right: 10px;
-          width: 100%;
-          top: 0; /* Ensure it sticks to the top in mobile */
-          position: fixed; /* Keep it fixed at the top */
-          z-index: 999; /* High z-index to ensure visibility */
-        }
-        /* .ncontainer.navbar-shown {
-          transform: translateY(0); /* Show navbar when scrolled up */
 
-        .nav {
+        .hero-text2 {
+          font-size: 1.2rem;
+        }
+
+        .category {
           width: 100%;
-          height: 50px;
         }
-        .menu5 {
-          flex-direction: row;
-        }
-        .nav-link {
-          padding: 10px;
+
+        .container2 h1 {
+          font-size: 2rem;
         }
       }
-      .profile-icon {
-        width: 45px;
-        height: 45px;
-        background-color: #e0d7ff;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .profile-icon i {
-        font-size: 30px;
-        color: #6b4eff;
-      }
-      .gradient-background {
-        background: linear-gradient(to bottom, #2c3e50, #fff);
-        height: 100vh; /* Adjust height as needed */
+
+      @media screen and (max-width: 480px) {
+        /* Mobile optimizations */
+        .hero-heading {
+          font-size: 1.8rem;
+        }
+
+        .hero-text2 {
+          font-size: 1rem;
+        }
+
+        .container2 h1 {
+          font-size: 1.5rem;
+        }
+
+        .btn-1 {
+          padding: 0.8rem 1.5rem;
+        }
       }
     </style>
   </head>
 
   <body>
-    <div class="d-inline-flex p-2">
-      <div class="">
-        <a class="navbar-brand" href="#"><img src="./img/logo.png" alt="" /></a>
-      </div>
-
-      <div
-        id="navbar_top"
-        class="ncontainer position-fixed d-flex flex-wrap justify-content-center"
-        style="z-index: 1"
-      >
-        <div class="row justify-content-center" style="width: 964px">
-          <div class="col-12">
-            <div class="nav">
-              <ul class="menu5" style="padding-left: 5px; padding-right: 5px">
-                <li class="nav-link">
-                  <a
-                    href="index.html"
-                    style="color: #fff; text-decoration: none"
-                    >Download</a
-                  >
-                </li>
-                <li class="nav-link">
-                  <a
-                    href="categories.html"
-                    style="color: #fff; text-decoration: none"
-                    >Categories</a
-                  >
-                </li>
-                <li class="nav-link">
-                  <a
-                    href="career.html"
-                    style="color: #fff; text-decoration: none"
-                    >Careers</a
-                  >
-                </li>
-                <li class="nav-link">
-                  <a
-                    href="opinion.html"
-                    style="color: #fff; text-decoration: none"
-                    >Opinions</a
-                  >
-                </li>
-                <li class="nav-link">
-                  <a
-                    href="support.html"
-                    style="color: #fff; text-decoration: none"
-                    >Support</a
-                  >
-                </li>
-              </ul>
-            </div>
+    <!-- Featured Categories Section -->
+    <section class="section-2">
+      <div class="container2">
+        <h1>Featured Categories</h1>
+        <div class="featured-categories">
+          <div class="category">
+            <h2>Category 1</h2>
+          </div>
+          <div class="category">
+            <h2>Category 2</h2>
+          </div>
+          <div class="category">
+            <h2>Category 3</h2>
+          </div>
+          <div class="category">
+            <h2>Category 4</h2>
+          </div>
+          <div class="category">
+            <h2>Category 5</h2>
+          </div>
+          <div class="category">
+            <h2>Category 6</h2>
           </div>
         </div>
       </div>
-      <div class="position-absolute end-0 d-inline-flex px-4">
-        <div class="d-inline-flex">
-          <div class="profile-icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="36"
-              height="26"
-              fill="currentColor"
-              class="bi bi-person"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
-              />
-            </svg>
-          </div>
-        </div>
+    </section>
 
-        <button
-          class="navbar-toggler bg-white"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasDarkNavbar"
-          aria-controls="offcanvasDarkNavbar"
-          aria-label="Toggle navigation"
-        >
-          <div class="d-flex flex-column px-4">
-            <img src="./img/toogol_btn/Line 4.png" alt="" style="width: 25px" />
-            <img src="./img/toogol_btn/Line 5.png" alt="" style="width: 32px" />
-            <img src="./img/toogol_btn/Line 6.png" alt="" style="width: 25px" />
-          </div>
-        </button>
-        <div
-          class="offcanvas offcanvas-end text-bg-dark"
-          tabindex="-1"
-          id="offcanvasDarkNavbar"
-          aria-labelledby="offcanvasDarkNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
-              Dark offcanvas
-            </h5>
-            <button
-              type="button"
-              class="btn-close btn-close-white"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-        </div>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-text">
+        <div class="hero-heading">Trade On Your <br />Own Terms</div>
+        <p class="hero-text2">With what matters to you</p>
+        <a href="#" class="btn-1">Get Started</a>
       </div>
-    </div>
-
-    <!-- //navbar -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Get all nav links
-        var links = document.querySelectorAll(".nav-link");
-
-        // Get current page URL path
-        var currentPath = window.location.pathname;
-
-        // Loop through each link
-        links.forEach(function (link) {
-          var linkPath = link.querySelector("a").getAttribute("href");
-
-          // Check if the current page matches the link's href
-          if (currentPath.includes(linkPath)) {
-            // If match, add 'active' class to this link
-            link.classList.add("active");
-          } else {
-            // Remove 'active' class from non-matching links
-            link.classList.remove("active");
-          }
-        });
-      });
-    </script>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+      <div class="hero-image">
+        <img
+          src="https://via.placeholder.com/600x400"
+          alt="Placeholder Image"
+        />
+      </div>
+    </section>
   </body>
 </html>

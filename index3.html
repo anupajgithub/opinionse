@@ -22,6 +22,7 @@
     .modal-header {
       border-bottom: none;
     }
+
     .image-container {
       top: -33px;
       flex: 1;
@@ -84,6 +85,7 @@
         padding: 7px 12px;
       }
     }
+
     .btn-outline-success,
     .btn-outline-primary {
       padding: 10px 20px;
@@ -101,22 +103,19 @@
     }
 
     .cta {
-      position: absolute;
       flex: 1;
-      text-align: right;
+      text-align: left; /* Change to left */
       color: white;
-      /* left: 7%; */
-      right: 7%;
+      margin-left: 7%; /* Add some margin on the left */
     }
+
     .cta h2 {
-      text-align: start;
       font-size: 5vw;
       margin-bottom: 10px;
     }
 
     .cta p {
       font-size: 1.5vw;
-      text-align: start;
     }
 
     .cta .btn {
@@ -135,16 +134,13 @@
     }
 
     .image-container {
-      top: 20px;
       flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
-      position: absolute;
+      position: relative;
       overflow: hidden;
-      /* height: 94%; */
       width: 47%;
-      left: 7%;
     }
 
     .image-1,
@@ -152,11 +148,8 @@
       max-width: 80%;
       height: auto;
       filter: brightness(0.9);
-      opacity: 2;
       transform: scale(2.05);
       position: relative;
-      right: 100px;
-      top: 100%;
     }
 
     .image-2 {
@@ -164,60 +157,35 @@
       top: 40%;
       left: 13%;
     }
+
     .image-1 {
       top: 85px;
     }
 
-    @media (max-width: 1000px) {
-      .image-container {
-        top: 20px;
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        overflow: hidden;
-        /* height: 94%; */
-        width: 64%;
-        left: 7%;
-      }
-    }
     @media (max-width: 768px) {
       .fcontainer {
         flex-direction: column;
         align-items: center;
         text-align: center;
       }
+
       .cta {
-        position: absolute;
-        top: 32px;
-        justify-content: center;
-        left: 20%;
-        flex: 1;
-        text-align: center;
-        color: white;
-      }
-      /* Ensure tcontainer comes first */
-      .tcontainer {
-        order: 1;
-        width: 100%;
+        text-align: center; /* Centered on small screens */
+        margin-left: 0; /* Reset margin */
       }
 
       .image-container {
-        position: absolute;
-        order: 2;
-        width: 70%;
-        height: 50%;
-        margin-top: 271px;
+        width: 56%;
+        /* height: 30%; */
+        left: 1px;
+        margin-top: -60px;
       }
 
       .cta h2 {
-        text-align: center;
         font-size: 5vw;
       }
 
       .cta p {
-        text-align: center;
         font-size: 3vw;
       }
 
@@ -228,83 +196,42 @@
       .image-1,
       .image-2 {
         max-width: 100%;
-        height: 367px;
-      }
-      .image-2 {
-        position: absolute;
-        top: 38%;
-        left: 37%;
-        width: 300px;
-        height: 300px;
-      }
-      .image-1 {
-        top: 151px;
-        left: 1px;
-        height: 300px;
-        width: 300px;
-        right: 20%;
-      }
-      .paraa {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        padding-top: 20px;
+        height: auto; /* Ensure responsive height */
       }
     }
-
-    .paraa {
-      padding-top: 60px;
-    }
-    @media (max-width: 480px) {
+    @media (max-width: 650px) {
       .image-container {
-        position: absolute;
-        order: 2;
-        width: 70%;
-        height: 60%;
-        margin-top: 271px;
+        width: 76%;
+        /* height: 66%; */
+        left: 1px;
+        margin-top: 0px;
       }
     }
-
     @media (max-width: 480px) {
       .fcontainer {
         flex-direction: column;
         align-items: center;
         text-align: center;
       }
-      .image-container {
-        position: absolute;
-        order: 2;
-        width: 100%;
-        height: 60%;
-        top: 10%;
-        left: 1%;
-      }
-
-      /* Ensure tcontainer comes first */
 
       .cta {
-        /* text-align: center; */
-        /* justify-content: center; */
-        position: absolute;
-        top: 58px;
-        left: 5%;
-        order: 1;
-        width: 100%;
+        position: static; /* Reset position */
+        margin: 20px 0; /* Add margin */
       }
 
-      .pic {
-        position: revert-layer;
-        order: 2;
-        width: 100%;
-        margin-top: 20px;
+      .image-container {
+        position: absolute;
+        justify-content: center;
+        top: 5%;
+        height: 100%;
+        /* width: 100%; */
       }
+
       .cta h2 {
-        text-align: center;
         font-size: 5vw;
       }
 
       .cta p {
-        text-align: center;
         font-size: 3vw;
       }
 
@@ -315,42 +242,14 @@
       .image-1,
       .image-2 {
         max-width: 100%;
-        height: 400px;
+        height: auto; /* Ensure responsive height */
       }
-
-      .image-2 {
-        position: absolute;
-        top: 34%;
-        left: 19%;
-        width: 100%;
-        height: auto;
-      }
-      .image-1 {
-        /* top: -37%; */
-        right: 20%;
-        height: auto;
-        width: 100%;
-        /* right: 20%; */
-        top: 20px;
-      }
-    }
-
-    .paraa {
-      position: absolute;
-      justify-content: center;
-      padding-top: 50px;
     }
   </style>
 
   <body>
     <div class="fcontainer container-fluid">
-      <div class="image-container">
-        <div class="pic">
-          <img src="./img/image.png" alt="Image 1" class="image-1" />
-          <img src="./img/image2.png" alt="Image 2" class="image-2" />
-        </div>
-      </div>
-
+      <!-- CTA section on the left -->
       <div class="cta">
         <div>
           <h2>Make Your<br />Opinions Heard</h2>
@@ -371,11 +270,18 @@
           >
             Download Now
           </button>
-          <!-- <a href="#" class="btn">Download our <br><b>Android App</b></a>
-                <a href="#" class="btn">Download from<br><b> App Store</b></a> -->
+        </div>
+      </div>
+
+      <!-- Image Container on the right -->
+      <div class="image-container">
+        <div class="pic">
+          <img src="./img/image.png" alt="Image 1" class="image-1" />
+          <img src="./img/image2.png" alt="Image 2" class="image-2" />
         </div>
       </div>
     </div>
+
     <!-- Modal -->
     <div
       class="modal fade"
