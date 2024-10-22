@@ -40,13 +40,12 @@
       }
 
       .menu5 {
+        height: 100%;
+        width: 100%;
         display: flex;
         align-items: center;
         list-style: none;
         justify-content: space-between;
-        padding: 0;
-        margin: 0;
-        width: 100%;
       }
 
       .nav-link {
@@ -55,12 +54,111 @@
         padding: 10px 20px;
         text-decoration: none;
       }
-
       .nav-link.active {
         background-color: #0a1f44;
         border-radius: 25px;
       }
+      @media (max-width: 1024px) {
+        .navbar-brand {
+          width: 58%;
+          left: 23%;
+        }
+        .ncontainer {
+          width: 60%;
+          left: 22%;
+        }
+      }
 
+      @media (max-width: 1350px) {
+        .col-12 {
+          flex: 0 0 auto;
+          width: 90%;
+        }
+      }
+      @media (max-width: 1200px) {
+        .navbar-brand {
+          width: 100px;
+          height: 48px;
+        }
+        .ncontainer {
+          width: 65%;
+          left: 19%;
+        }
+      }
+      @media (max-width: 768px) {
+        .navbar-brand {
+          width: 100px;
+          height: 48px;
+        }
+        .ncontainer {
+          padding-left: 10px;
+          padding-right: 10px;
+          width: 100%;
+          bottom: 5px;
+          top: 0; /* Ensure it sticks to the top in mobile */
+          position: fixed; /* Keep it fixed at the top */
+          z-index: 999; /* High z-index to ensure visibility */
+        }
+        .ncontainer.navbar-shown {
+          transform: translateY(0); /* Show navbar when scrolled up */
+        }
+        .nav {
+          width: 96%;
+          position: fixed;
+          bottom: 10px;
+          left: 2%;
+          right: 2%;
+          z-index: 999;
+        }
+        .menu5 {
+          flex-direction: row;
+        }
+        .nav-link.active {
+          background-size: cover;
+          background-color: #0a1f44;
+          border-radius: 25px;
+          height: 35px;
+        }
+        .nav-link {
+          color: white;
+          font-size: 14px;
+          justify-items: center;
+          padding: 10px 20px;
+          text-decoration: none;
+        }
+        .nav-link:focus,
+        .nav-link:hover {
+          color: #e7ebf0;
+        }
+      }
+      @media (max-width: 480px) {
+        .ncontainer {
+          padding-left: 10px;
+          padding-right: 10px;
+          width: 100%;
+          bottom: 5px;
+          top: 0; /* Ensure it sticks to the top in mobile */
+          position: fixed; /* Keep it fixed at the top */
+          z-index: 999; /* High z-index to ensure visibility */
+        }
+        .ncontainer.navbar-shown {
+          transform: translateY(0); /* Show navbar when scrolled up */
+        }
+        .nav {
+          width: 96%;
+          position: fixed;
+          bottom: 10px;
+          left: 2%;
+          right: 2%;
+          z-index: 999;
+        }
+        .menu5 {
+          flex-direction: row;
+        }
+        .nav-link {
+          padding: 10px;
+        }
+      }
       .profile-icon {
         width: 45px;
         height: 45px;
@@ -70,48 +168,13 @@
         align-items: center;
         justify-content: center;
       }
-
-      /* Media Queries for Responsiveness */
-      @media (max-width: 768px) {
-        .ncontainer {
-          width: 100%;
-          top: 0;
-          position: fixed;
-          z-index: 999;
-        }
-
-        .nav {
-          width: 100%;
-          position: fixed;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          z-index: 999;
-        }
-
-        .menu5 {
-          flex-direction: row;
-        }
-
-        .nav-link {
-          font-size: 14px;
-          padding: 10px 10px;
-        }
+      .profile-icon i {
+        font-size: 30px;
+        color: #6b4eff;
       }
-
-      @media (max-width: 576px) {
-        .nav {
-          height: 50px;
-        }
-
-        .menu5 {
-          flex-direction: row;
-        }
-
-        .nav-link {
-          padding: 10px;
-          font-size: 13px;
-        }
+      .gradient-background {
+        background: linear-gradient(to bottom, #2c3e50, #fff);
+        height: 100vh; /* Adjust height as needed */
       }
     </style>
     <style>
@@ -214,7 +277,7 @@
                 </li>
                 <li class="nav-link">
                   <a
-                    href="categories.html"
+                    href="catagories.html"
                     style="color: #fff; text-decoration: none"
                     >Categories</a
                   >
@@ -272,6 +335,7 @@
           data-bs-target="#offcanvasDarkNavbar"
           aria-controls="offcanvasDarkNavbar"
           aria-label="Toggle navigation"
+          style="z-index: 1"
         >
           <div class="d-flex flex-column px-4">
             <img src="./img/toogol_btn/Line 4.png" alt="" style="width: 25px" />
