@@ -3,392 +3,401 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ab Kamao Opinion Se</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/bs-brain@2.0.4/components/heroes/hero-3/assets/css/hero-3.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="styles.css" />
+    <title>Opinion App Landing Page</title>
     <style>
-      .container {
-        width: 100%;
-        margin: 0 auto;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
       }
-      .ncontainer {
-        width: 100%;
-        margin: 0 auto;
-        padding: 0 15px;
-        /* max-width: 1200px; Adjust this value as needed */
+
+      .hcontainer {
+        min-height: 80vh;
+        position: relative;
+        text-align: left;
+        padding: 100px;
+        background: linear-gradient(to bottom, #243c54, #fff);
+        overflow: hidden;
+      }
+
+      .tcontainer {
+        padding-top: 5%;
+        position: relative;
+        z-index: 2;
+      }
+
+      .title {
+        font-size: 48px;
+        font-weight: bold;
+        color: #f5efef;
+        margin-bottom: 0;
+      }
+
+      .subtitle {
+        font-size: 48px;
+        font-weight: bold;
+        color: #02214f;
+        margin-bottom: 16px;
+      }
+
+      .description {
+        font-size: 22px;
+        color: #2c3e50;
+        margin-bottom: 32px;
+      }
+
+      .btn-download {
+        background-color: #02214f;
+        color: white;
+        font-size: 18px;
+        padding: 12px 32px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .btn-download:hover {
+        background-color: #033072;
+      }
+
+      .checkbox {
+        margin-top: 16px;
+        color: #000000;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .checkbox input {
+        width: 16px;
+        height: 16px;
+      }
+
+      .image-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-5%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .image-container img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .girl-image {
+        position: absolute;
+        top: 18px;
+        right: 200px;
+        width: 359px;
+        height: 500px;
+        z-index: 1;
+      }
+
+      .phone-image {
+        position: absolute;
+        top: 360px;
+        left: 70px;
+        width: 650px;
+        z-index: 1;
+        height: auto;
+      }
+
+      .speech-bubble {
+        position: absolute;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #2c3e50;
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      .speech-bubble-yes {
+        background-color: #007bff;
+        color: white;
+        top: 250px;
+        left: 50px;
+        width: 208px;
+        font-weight: bold;
+        font-size: 24px;
+        text-align: center;
+        animation: slideInUp 2s ease-in-out;
+      }
+
+      .speech-bubble-no {
+        background-color: #ff4d4d;
+        color: white;
+        top: 90px;
+        right: 40px;
+        width: 30%;
+        font-weight: bold;
+        font-size: 24px;
+        text-align: center;
+        animation: slideInUp 2s ease-in-out;
+      }
+
+      .speech-bubble-tata {
+        position: absolute;
+        height: 90px;
+        width: 350px;
+        top: 151px;
+        left: 200px;
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      .logo {
+        position: absolute;
+        animation: slideInUp 2s ease-in-out;
+      }
+
+      .logo-1 {
+        top: 3%;
+        left: 29%;
+        opacity: 0.5;
+      }
+
+      .logo-2 {
+        top: 231px;
+        left: 564px;
+        opacity: 0.8;
+      }
+
+      .logo-3 {
+        top: 350px;
+        left: 25px;
+        opacity: 1.1;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInUp {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsive Breakpoints */
+      @media (max-width: 1350px) {
+        .girl-image {
+          right: 89px;
+        }
+
+        .phone-image {
+          width: 600px;
+        }
       }
 
       @media (max-width: 1200px) {
-        .ncontainer {
-          max-width: 600px;
-          left: 220px;
-        }
-      }
-
-      @media (max-width: 992px) {
-        .ncontainer {
-          max-width: 619px;
-          left: 195px;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .ncontainer {
-          max-width: 540px;
-          padding-left: 10px;
-          padding-right: 10px;
-          top: 0;
-          position: fixed;
-          z-index: 999;
-        }
-      }
-
-      @media (max-width: 576px) {
-        .ncontainer {
-          max-width: 100%;
-        }
-      }
-      .nav {
-        background: linear-gradient(
-          to right,
-          #1e5799,
-          #2989d8,
-          #207cca,
-          #7db9e8
-        );
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        position: relative;
-        width: 100%;
-        height: 50px;
-        border-radius: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .menu5 {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        list-style: none;
-        justify-content: space-between;
-      }
-
-      .nav-link {
-        color: white;
-        font-size: 16px;
-        padding: 10px 20px;
-        text-decoration: none;
-      }
-      .nav-link.active {
-        background-color: #0a1f44;
-        border-radius: 25px;
-      }
-
-      @media (max-width: 768px) {
-        .navbar-brand {
-          width: 100px;
-          height: 48px;
-        }
-        .ncontainer {
-          padding-left: 10px;
-          padding-right: 10px;
-          width: 100%;
-          top: 0; /* Ensure it sticks to the top in mobile */
-          position: fixed; /* Keep it fixed at the top */
-          z-index: 999; /* High z-index to ensure visibility */
-          /* Initially hide the navbar */
+        .hcontainer {
+          height: auto;
+          min-height: 120vh;
+          padding: 50px;
+          text-align: center;
         }
 
-        .nav {
-          width: 100%;
-          position: fixed;
-          bottom: 0; /* Stick to the bottom */
+        .image-container {
+          position: relative;
           left: 0;
-          right: 0;
-          z-index: 999;
+          transform: none;
+          margin-top: 50px;
+          height: 800px;
         }
-        .menu5 {
-          flex-direction: row;
-        }
-        .nav-link.active {
-          background-size: cover;
-          background-color: #0a1f44;
-          border-radius: 25px;
-          height: 35px;
-        }
-        .nav-link {
-          color: white;
-          font-size: 14px;
-          justify-items: center;
-          padding: 10px 20px;
-          text-decoration: none;
-        }
-        .nav-link:focus,
-        .nav-link:hover {
-          color: #e7ebf0;
-        }
-      }
-      @media (max-width: 480px) {
-        .ncontainer {
-          padding-left: 10px;
-          padding-right: 10px;
-          width: 100%;
-          top: 0; /* Ensure it sticks to the top in mobile */
-          position: fixed; /* Keep it fixed at the top */
-          z-index: 999; /* High z-index to ensure visibility */
-        }
-        /* .ncontainer.navbar-shown {
-          transform: translateY(0); /* Show navbar when scrolled up */
 
-        .nav {
-          width: 100%;
-          height: 50px;
+        .girl-image {
+          right: auto;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 300px;
+          height: auto;
         }
-        .menu5 {
-          flex-direction: row;
+
+        .phone-image {
+          width: 90%;
+          max-width: 500px;
+          left: 50%;
+          transform: translateX(-50%);
         }
-        .nav-link {
-          padding: 10px;
+
+        .speech-bubble-yes {
+          left: 15%;
+          width: 25%;
+        }
+
+        .speech-bubble-no {
+          left: 65%;
+          right: auto;
+        }
+
+        .speech-bubble-tata {
+          left: 28%;
+          width: 51%;
+        }
+
+        .logo-1 {
+          left: 34%;
+        }
+        .logo-2 {
+          left: 82%;
+        }
+        .logo-3 {
+          left: 4%;
         }
       }
-      .profile-icon {
-        width: 45px;
-        height: 45px;
-        background-color: #e0d7ff;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+
+      @media (max-width: 768px) {
+        .hcontainer {
+          padding: 30px;
+          min-height: 100vh;
+        }
+
+        .title,
+        .subtitle {
+          font-size: 36px;
+        }
+
+        .description {
+          font-size: 18px;
+        }
+
+        .btn-download {
+          width: 200px;
+          font-size: 16px;
+        }
+
+        .speech-bubble-yes,
+        .speech-bubble-no,
+        .speech-bubble-tata {
+          font-size: 14px;
+        }
+
+        .logo img {
+          width: 80px;
+        }
       }
-      .profile-icon i {
-        font-size: 30px;
-        color: #6b4eff;
-      }
-      .gradient-background {
-        background: linear-gradient(to bottom, #2c3e50, #fff);
-        height: 100vh; /* Adjust height as needed */
+
+      @media (max-width: 480px) {
+        .hcontainer {
+          padding: 20px;
+          min-height: 80vh;
+        }
+
+        .image-container {
+          height: 500px;
+          margin: 25px;
+        }
+
+        .girl-image {
+          width: 50%;
+        }
+
+        .phone-image {
+          top: 45%;
+          width: 87%;
+          left: 10%;
+        }
+
+        .speech-bubble-yes,
+        .speech-bubble-no,
+        .speech-bubble-tata {
+          font-size: 12px;
+        }
+
+        .speech-bubble-tata {
+          top: 25%;
+          left: 25%;
+          width: 55%;
+        }
+
+        .speech-bubble-yes {
+          left: 22%;
+          top: 36%;
+          width: 27%;
+          transform: translateX(-50%);
+        }
+
+        .speech-bubble-no {
+          left: 81%;
+          top: 16%;
+          transform: translateX(-50%);
+        }
+
+        .logo {
+          width: 16%;
+        }
+
+        .logo-1 {
+          top: 6%;
+          left: 30%;
+        }
+
+        .logo-2 {
+          top: 45%;
+          left: 1%;
+        }
+
+        .logo-3 {
+          top: 34%;
+          left: 79%;
+        }
       }
     </style>
   </head>
-
   <body>
-    <div class="d-inline-flex p-2">
-      <div class="">
-        <a class="navbar-brand" href="#"><img src="./img/logo.png" alt="" /></a>
-      </div>
-
-      <div
-        id="navbar_top"
-        class="ncontainer position-fixed d-flex flex-wrap justify-content-center"
-        style="z-index: 1"
-      >
-        <div class="row justify-content-center" style="width: 964px">
-          <div class="col-12">
-            <div class="nav">
-              <ul class="menu5" style="padding-left: 5px; padding-right: 5px">
-                <li class="nav-link">
-                  <a
-                    href="index.html"
-                    style="color: #fff; text-decoration: none"
-                    >Download</a
-                  >
-                </li>
-                <li class="nav-link">
-                  <a
-                    href="categories.html"
-                    style="color: #fff; text-decoration: none"
-                    >Categories</a
-                  >
-                </li>
-                <li class="nav-link">
-                  <a
-                    href="career.html"
-                    style="color: #fff; text-decoration: none"
-                    >Careers</a
-                  >
-                </li>
-                <li class="nav-link">
-                  <a
-                    href="opinion.html"
-                    style="color: #fff; text-decoration: none"
-                    >Opinions</a
-                  >
-                </li>
-                <li class="nav-link">
-                  <a
-                    href="support.html"
-                    style="color: #fff; text-decoration: none"
-                    >Support</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
+    <div class="hcontainer">
+      <div class="tcontainer">
+        <h1 class="title">Ab Kamao</h1>
+        <h2 class="subtitle">Opinion Se</h2>
+        <p class="description">
+          Sports, Entertainment, Current Affairs and Many More
+        </p>
+        <button class="btn-download">Download Now</button>
+        <div class="checkbox">
+          <input type="checkbox" id="ageCheck" checked disabled />
+          <label for="ageCheck">For 18+ Years Only</label>
         </div>
       </div>
-      <div class="position-absolute end-0 d-inline-flex px-4">
-        <div class="d-inline-flex">
-          <div class="profile-icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="36"
-              height="26"
-              fill="currentColor"
-              class="bi bi-person"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
-              />
-            </svg>
-          </div>
+
+      <div class="image-container">
+        <img class="girl-image" src="./img/girl.logo.png" alt="Opinion Girl" />
+        <img
+          class="phone-image"
+          src="./img/hero-thumb-4.33409573.png 1 (1).png"
+          alt="App Interface"
+        />
+
+        <div class="speech-bubble speech-bubble-yes">Yes $4.00</div>
+        <div class="speech-bubble speech-bubble-no">No $6.00</div>
+        <div class="speech-bubble-tata">
+          <img src="./img/Group 727 1.png" alt="Tata" />
         </div>
 
-        <button
-          class="navbar-toggler bg-white"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasDarkNavbar"
-          aria-controls="offcanvasDarkNavbar"
-          aria-label="Toggle navigation"
-        >
-          <div class="d-flex flex-column px-4">
-            <img src="./img/toogol_btn/Line 4.png" alt="" style="width: 25px" />
-            <img src="./img/toogol_btn/Line 5.png" alt="" style="width: 32px" />
-            <img src="./img/toogol_btn/Line 6.png" alt="" style="width: 25px" />
-          </div>
-        </button>
-        <div
-          class="offcanvas offcanvas-end text-bg-dark"
-          tabindex="-1"
-          id="offcanvasDarkNavbar"
-          aria-labelledby="offcanvasDarkNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
-              Dark offcanvas
-            </h5>
-            <button
-              type="button"
-              class="btn-close btn-close-white"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
+        <div class="logo logo-1">
+          <img src="./img/Group 728 3 (1).png" alt="Logo 1" />
+        </div>
+        <div class="logo logo-2">
+          <img src="./img/Group 728 1 (2).png" alt="Logo 2" />
+        </div>
+        <div class="logo logo-3">
+          <img src="./img/Group 728 3 (2).png" alt="Logo 3" />
         </div>
       </div>
     </div>
-
-    <!-- //navbar -->
-
-    <style>
-      iframe {
-        width: 100%; /* Make the iframe take the full width */
-        border: none; /* Remove border */
-      }
-    </style>
-
-    <!-- Iframes -->
-    <iframe src="iphone.html" id="iframe1" scrolling="no"></iframe>
-    <iframe
-      class="grid1"
-      src="index1.html"
-      id="iframe2"
-      scrolling="no"
-    ></iframe>
-    <iframe src="card.html" id="iframe3" scrolling="no"></iframe>
-    <iframe src="index2.html" id="iframe4" scrolling="no"></iframe>
-
-    <!-- JavaScript for dynamically adjusting the height of each iframe -->
-    <script>
-      // Function to adjust the iframe height based on content
-      function adjustIframeHeight(iframeId) {
-        var iframe = document.getElementById(iframeId);
-        if (
-          iframe &&
-          iframe.contentWindow &&
-          iframe.contentWindow.document.body
-        ) {
-          iframe.style.height =
-            iframe.contentWindow.document.body.scrollHeight + "px";
-        }
-      }
-
-      // Adjust height of all iframes once they load
-      var iframes = ["iframe1", "iframe2", "iframe3", "iframe4"];
-      iframes.forEach(function (iframeId) {
-        var iframe = document.getElementById(iframeId);
-        iframe.onload = function () {
-          adjustIframeHeight(iframeId);
-        };
-      });
-    </script>
-    <script>
-      window.addEventListener("message", function (event) {
-        // Check the message type
-        if (event.data.type === "setHeight") {
-          // Find the iframe that sent the message
-          var iframe = document.querySelector(
-            'iframe[src="' + event.origin + '"]'
-          );
-
-          // Adjust the iframe height
-          if (iframe) {
-            iframe.style.height = event.data.height + "px";
-          }
-        }
-      });
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Get all nav links
-        var links = document.querySelectorAll(".nav-link");
-
-        // Get current page URL path
-        var currentPath = window.location.pathname;
-
-        // Loop through each link
-        links.forEach(function (link) {
-          var linkPath = link.querySelector("a").getAttribute("href");
-
-          // Check if the current page matches the link's href
-          if (currentPath.includes(linkPath)) {
-            // If match, add 'active' class to this link
-            link.classList.add("active");
-          } else {
-            // Remove 'active' class from non-matching links
-            link.classList.remove("active");
-          }
-        });
-      });
-    </script>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
